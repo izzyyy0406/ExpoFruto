@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Expofruto - Nuestros procesos de exportación de frutas. Calidad garantizada desde Colombia para el mundo."
+    />
+    <title>Expofruto - Procesos de Exportación</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/estilos.css" rel="stylesheet" />
+    <link href="css/decoraciones.css" rel="stylesheet" />
+    <link href="css/procesos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ephesis&family=Italianno&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/6.6.6/css/flag-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ephesis&family=Italianno&family=Quicksand:wght@300..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <style></style>
+  <body>
+    <!-- Header/Navbar (espacio reservado) -->
+    <!-- Header/Navbar -->
+    <header class="fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-light navbar-solid">
+        <div class="container">
+          <a class="navbar-brand logo-container" href="index.html">
+            <img src="img/logo.png" alt="Expofruto" class="logo-img" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="index.html"
+                  data-i18n="nav.inicio"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="nosotros.html"
+                  data-i18n="nav.nosotros"
+                  >Nosotros</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="productos.html"
+                  data-i18n="nav.productos"
+                  >Productos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="procesos.html"
+                  data-i18n="nav.procesos"
+                  >Procesos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="contacto.html"
+                  data-i18n="nav.contacto"
+                  >Contacto</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ficha.html" data-i18n="nav.precios"
+                  >Precios de la semana</a
+                >
+              </li>
+            </ul>
+            <div class="dropdown ms-3">
+              <button
+                class="btn btn-sm dropdown-toggle language-dropdown"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                <img src="img/colombia.png" alt="Español" class="flag-icon" />
+                ES
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#" data-lang="es">
+                    <img
+                      src="img/colombia.png"
+                      alt="Español"
+                      class="flag-icon"
+                    />
+                    ES
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" data-lang="en">
+                    <img src="img/euu.png" alt="English" class="flag-icon" /> EN
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" data-lang="fr">
+                    <img
+                      src="img/francia.png"
+                      alt="Français"
+                      class="flag-icon"
+                    />
+                    FR
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" data-lang="it">
+                    <img
+                      src="img/italia.webp"
+                      alt="Italiano"
+                      class="flag-icon"
+                    />
+                    IT
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Sección Hero -->
+    <section class="hero-section-procesos">
+      <div class="container">
+        <h1 class="hero-title" data-i18n="procesos.heroTitle">
+          Nuestros Procesos de Exportación
+        </h1>
+        <p class="hero-subtitle" data-i18n="procesos.heroSubtitle">
+          Calidad garantizada desde el campo hasta su destino final
+        </p>
+      </div>
+    </section>
+
+    <!-- Sección de Procesos con Pasos -->
+    <section class="procesos-pasos py-5 position-relative section-watermark">
+      <!-- Contenedor del logo de fondo con posición fija -->
+
+      <div class="decoraciones">
+        <img
+          src="img/deco2.png"
+          alt="Decoración derecha"
+          class="decoracion-right"
+        />
+        <img
+          src="img/deco1.png"
+          alt="Decoración izquierda"
+          class="decoracion-left"
+        />
+      </div>
+      <div class="logo-watermark-bg">
+        <img src="img/logo2.png" alt="Expofruto background logo" />
+      </div>
+
+      <div class="container position-relative">
+        <div class="section-intro text-center mb-5">
+          <h2 data-i18n="procesos.tituloSeccion">
+            Cómo Exportamos Nuestras Frutas
+          </h2>
+          <p class="lead" data-i18n="procesos.descSeccion">
+            Cada paso de nuestro proceso está diseñado para garantizar la máxima
+            calidad y frescura
+          </p>
+        </div>
+
+        <div class="proceso-container row">
+          <!-- Columna 1 -->
+          <div class="col-lg-6">
+            <!-- Paso 1 -->
+            <div class="proceso-paso">
+              <div class="paso-numero">1</div>
+              <div class="paso-contenido">
+                <h3 data-i18n="procesos.paso1.titulo">Selección en Campo</h3>
+                <p data-i18n="procesos.paso1.desc">
+                  Nuestros expertos seleccionan las frutas en su punto óptimo de
+                  maduración directamente desde los cultivos asociados.
+                </p>
+              </div>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="proceso-paso">
+              <div class="paso-numero">3</div>
+              <div class="paso-contenido">
+                <h3 data-i18n="procesos.paso3.titulo">Lavado y Desinfección</h3>
+                <p data-i18n="procesos.paso3.desc">
+                  Proceso riguroso de limpieza con agua potable y desinfección
+                  con productos autorizados para consumo humano.
+                </p>
+              </div>
+            </div>
+
+            <!-- Paso 5 -->
+            <div class="proceso-paso">
+              <div class="paso-numero">5</div>
+              <div class="paso-contenido">
+                <h3 data-i18n="procesos.paso5.titulo">Empaque Especializado</h3>
+                <p data-i18n="procesos.paso5.desc">
+                  Utilizamos empaques diseñados para proteger las frutas durante
+                  el transporte internacional.
+                </p>
+              </div>
+            </div>
+
+            <!-- Paso 7 -->
+            <div class="proceso-paso">
+              <div class="paso-numero">7</div>
+              <div class="paso-contenido">
+                <h3 data-i18n="procesos.paso7.titulo">
+                  Transporte Internacional
+                </h3>
+                <p data-i18n="procesos.paso7.desc">
+                  Enviamos las frutas por vía aérea o marítima en contenedores
+                  refrigerados, según el destino.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna 2 -->
+          <div class="col-lg-6">
+            <!-- Paso 2 -->
+            <div class="proceso-paso">
+              <div class="paso-numero">2</div>
+              <div class="paso-contenido">
+                <h3 data-i18n="procesos.paso2.titulo">
+                  Transporte Refrigerado
+                </h3>
+                <p data-i18n="procesos.paso2.desc">
+                  Las frutas son transportadas en vehículos con temperatura
+                  controlada hasta nuestra planta de procesamiento.
+                </p>
+              </div>
+            </div>
+
+            <!-- Paso 4 -->
+            <div class="proceso-paso">
+              <div class="paso-numero">4</div>
+              <div class="paso-contenido">
+                <h3 data-i18n="procesos.paso4.titulo">
+                  Clasificación por Calidad
+                </h3>
+                <p data-i18n="procesos.paso4.desc">
+                  Sistemas automatizados y personal especializado clasifican las
+                  frutas por tamaño, color y calidad.
+                </p>
+              </div>
+            </div>
+
+            <!-- Paso 6 -->
+            <div class="proceso-paso">
+              <div class="paso-numero">6</div>
+              <div class="paso-contenido">
+                <h3 data-i18n="procesos.paso6.titulo">
+                  Almacenamiento en Frío
+                </h3>
+                <p data-i18n="procesos.paso6.desc">
+                  Las frutas se almacenan en cámaras frigoríficas hasta su
+                  despacho, manteniendo la cadena de frío.
+                </p>
+              </div>
+            </div>
+
+            <!-- Paso 8 -->
+            <div class="proceso-paso">
+              <div class="paso-numero">8</div>
+              <div class="paso-contenido">
+                <h3 data-i18n="procesos.paso8.titulo">Distribución Final</h3>
+                <p data-i18n="procesos.paso8.desc">
+                  Coordinamos con distribuidores locales para entregar el
+                  producto fresco a los puntos de venta.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resto de tu contenido (galerías, timeline, etc.) permanece igual -->
+    <!-- Galería de Fotos Horizontal -->
+    <section class="galeria-fotos py-5">
+      <div class="container">
+        <h2 class="text-center mb-5" data-i18n="galeriaFotos.titulo">
+          Nuestro Proceso en Imágenes
+        </h2>
+
+        <div class="galeria-horizontal-container">
+          <div class="galeria-horizontal">
+            <div class="foto-item">
+              <img
+                src="img/procesos/cosecha3.jpeg"
+                alt="Cultivo"
+                data-i18n="galeriaFotos.img1.alt"
+              />
+              <div class="foto-desc" data-i18n="galeriaFotos.img1.desc">
+                Selección en campo
+              </div>
+            </div>
+            <div class="foto-item">
+              <img
+                src="img/procesos/trasnporte.jpeg"
+                alt="Transporte"
+                data-i18n="galeriaFotos.img2.alt"
+              />
+              <div class="foto-desc" data-i18n="galeriaFotos.img2.desc">
+                Transporte
+              </div>
+            </div>
+            <div class="foto-item">
+              <img
+                src="img/procesos/lavado2.jpeg"
+                alt="Lavado"
+                data-i18n="galeriaFotos.img3.alt"
+              />
+              <div class="foto-desc" data-i18n="galeriaFotos.img3.desc">
+                Lavado y desinfección
+              </div>
+            </div>
+            <div class="foto-item">
+              <img
+                src="img/procesos/seleccion.jpeg"
+                alt="Clasificación"
+                data-i18n="galeriaFotos.img4.alt"
+              />
+              <div class="foto-desc" data-i18n="galeriaFotos.img4.desc">
+                Clasificación por calidad
+              </div>
+            </div>
+            <div class="foto-item">
+              <img
+                src="img/procesos/empaca2.jpeg"
+                alt="Empaque"
+                data-i18n="galeriaFotos.img5.alt"
+              />
+              <div class="foto-desc" data-i18n="galeriaFotos.img5.desc">
+                Empaque especializado
+              </div>
+            </div>
+            <div class="foto-item">
+              <img
+                src="img/procesos/almacenado.jpeg"
+                alt="Almacenamiento"
+                data-i18n="galeriaFotos.img6.alt"
+              />
+              <div class="foto-desc" data-i18n="galeriaFotos.img6.desc">
+                Almacenamiento
+              </div>
+            </div>
+            <div class="foto-item">
+              <img
+                src="img/procesos/expor.jpeg"
+                alt="Exportación"
+                data-i18n="galeriaFotos.img7.alt"
+              />
+              <div class="foto-desc" data-i18n="galeriaFotos.img7.desc">
+                Preparación para exportación
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="galeria-videos py-5 bg-light">
+      <div class="container">
+        <h2
+          class="text-center mb-5 titulo-galeria"
+          data-i18n="galeriaVideos.titulo"
+        >
+          Conoce Nuestro Trabajo
+        </h2>
+
+        <div class="video-container">
+          <!-- Video 1 -->
+          <div class="video-item mb-4">
+            <div class="ratio ratio-16x9">
+              <video
+                controls
+                class="w-100 h-100"
+                muted
+                playsinline
+                onvolumechange="this.muted=true;"
+              >
+                <source src="videos/aguacates.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+
+          <!-- Video 2 -->
+          <div class="video-item mb-4">
+            <div class="ratio ratio-16x9">
+              <video
+                controls
+                class="w-100 h-100"
+                muted
+                playsinline
+                onvolumechange="this.muted=true;"
+              >
+                <source src="videos/videoPlanta.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+
+          <!-- Video 3 -->
+          <div class="video-item">
+            <div class="ratio ratio-16x9">
+              <video
+                controls
+                class="w-100 h-100"
+                muted
+                playsinline
+                onvolumechange="this.muted=true;"
+              >
+                <source src="videos/Empacado.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Cuidados de las Frutas -->
+    <section class="cuidados-frutas py-5">
+      <div class="container">
+        <h2 class="text-center mb-5" data-i18n="cuidados.titulo">
+          Cuidados Especializados
+        </h2>
+        <p class="text-center mb-5" data-i18n="cuidados.subtitulo">
+          Cada fruta requiere un manejo especial para mantener su calidad
+          durante el transporte
+        </p>
+
+        <div class="row">
+          <!-- Aguacate Hass -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="fruta-card aguacate">
+              <div class="fruta-icon">
+                <img src="img/frutas/aguacateDec2.png" alt="Aguacate Hass" />
+              </div>
+              <h3 data-i18n="cuidados.aguacate.titulo">Aguacate Hass</h3>
+              <ul>
+                <li data-i18n="cuidados.aguacate.item1">
+                  Temperatura óptima: 4-8°C
+                </li>
+                <li data-i18n="cuidados.aguacate.item2">
+                  Humedad relativa: 85-95%
+                </li>
+                <li data-i18n="cuidados.aguacate.item3">
+                  Evitar contacto con etileno
+                </li>
+                <li data-i18n="cuidados.aguacate.item4">
+                  Empaque individual con protección
+                </li>
+                <li data-i18n="cuidados.aguacate.item5">
+                  Vida útil postcosecha: 2-4 semanas
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Limón Tahití -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="fruta-card limon">
+              <div class="fruta-icon">
+                <img src="img/frutas/limonDecorativo.png" alt="Limón Tahití" />
+              </div>
+              <h3 data-i18n="cuidados.limon.titulo">Limón Tahití</h3>
+              <ul>
+                <li data-i18n="cuidados.limon.item1">
+                  Temperatura óptima: 8-10°C
+                </li>
+                <li data-i18n="cuidados.limon.item2">
+                  Humedad relativa: 90-95%
+                </li>
+                <li data-i18n="cuidados.limon.item3">
+                  Resistente a bajas temperaturas
+                </li>
+                <li data-i18n="cuidados.limon.item4">
+                  Empaque en mallas ventiladas
+                </li>
+                <li data-i18n="cuidados.limon.item5">
+                  Vida útil postcosecha: 3-6 semanas
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Añade aquí más frutas si es necesario -->
+        </div>
+
+        <div class="text-center mt-5">
+          <a
+            href="productos.html"
+            class="btn btn-productos"
+            data-i18n="cuidados.boton"
+          >
+            Ver todos nuestros productos
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Trabaja con Nosotros -->
+    <section class="cta-trabaja py-5">
+      <div class="container text-center">
+        <div class="cta-content">
+          <h2 class="mb-4" data-i18n="ctaTrabaja.titulo">
+            ¿Quieres trabajar con nosotros?
+          </h2>
+          <p class="mb-4" data-i18n="ctaTrabaja.desc">
+            Únete a nuestra red de productores y comercializadores
+            internacionales
+          </p>
+          <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a
+              href="formulario_interesado.html"
+              class="btn btn-comerciante"
+              data-i18n="ctaTrabaja.boton1"
+            >
+              <i class="fas fa-store me-2"></i> Soy comerciante
+            </a>
+            <a
+              href="formulario_productor.html"
+              class="btn btn-productor"
+              data-i18n="ctaTrabaja.boton2"
+            >
+              <i class="fas fa-tractor me-2"></i> Soy productor
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer (espacio reservado) -->
+    <footer class="bg-dark text-white pt-5 pb-4 position-relative">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <!-- Logo y descripción -->
+          <div class="col-md-5 col-lg-4">
+            <div class="footer-logo-container mb-3">
+              <img
+                src="img/logo2.png"
+                alt="Expofruto"
+                class="footer-logo me-3"
+              />
+            </div>
+            <p class="text-muted mb-4" data-i18n="footer_description">
+              Exportamos calidad desde Colombia para el mundo.
+            </p>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/expofruto"
+                target="_blank"
+                class="text-white hover-green me-3"
+              >
+                <i class="fab fa-facebook-f fa-lg"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/expofruto"
+                target="_blank"
+                class="text-white hover-green me-3"
+              >
+                <i class="fab fa-instagram fa-lg"></i>
+              </a>
+              <a
+                href="https://wa.me/573104389536"
+                target="_blank"
+                class="text-white hover-green"
+              >
+                <i class="fab fa-whatsapp fa-lg"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contacto -->
+          <div class="col-md-7 col-lg-4">
+            <div class="footer-title">
+              <h5
+                class="text-uppercase mb-0"
+                style="
+                  color: #6ac82a;
+                  font-family: 'Montserrat', sans-serif;
+                  font-weight: 600;
+                "
+                data-i18n="footer_contact"
+              >
+                Contacto
+              </h5>
+            </div>
+            <ul class="list-unstyled contact-list">
+              <li class="mb-3 d-flex align-items-center">
+                <div
+                  class="contact-icon me-3 d-flex align-items-center justify-content-center"
+                  style="
+                    background-color: #ea4335;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                  "
+                >
+                  <i class="fas fa-envelope text-white"></i>
+                </div>
+                <div>
+                  <a
+                    href="mailto:gerencia@expofruto.com"
+                    class="text-white text-decoration-none hover-green"
+                    >gerencia@expofruto.com</a
+                  >
+                </div>
+              </li>
+              <li class="mb-3 d-flex align-items-center">
+                <div
+                  class="contact-icon me-3 d-flex align-items-center justify-content-center"
+                  style="
+                    background-color: #25d366;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                  "
+                >
+                  <i class="fab fa-whatsapp text-white"></i>
+                </div>
+                <div>
+                  <a
+                    href="https://wa.me/573104389536"
+                    target="_blank"
+                    class="text-white text-decoration-none hover-green"
+                    >+57 310 438 9536</a
+                  >
+                </div>
+              </li>
+              <li class="d-flex align-items-center">
+                <div
+                  class="contact-icon me-3 d-flex align-items-center justify-content-center"
+                  style="
+                    background-color: #4285f4;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                  "
+                >
+                  <i class="fas fa-map-marker-alt text-white"></i>
+                </div>
+                <div>
+                  <span class="text-white"
+                    >Calle Atardeceres de Jaibaná, Vereda Cerritos, 660007
+                    Pereira</span
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Enlaces rápidos -->
+          <div class="col-md-12 col-lg-4 mt-4 mt-lg-0">
+            <div class="footer-title">
+              <h5
+                class="text-uppercase mb-0"
+                style="
+                  color: #6ac82a;
+                  font-family: 'Montserrat', sans-serif;
+                  font-weight: 600;
+                "
+                data-i18n="footer_links"
+              >
+                Enlaces Rápidos
+              </h5>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <a
+                      href="nosotros.html"
+                      class="text-white text-decoration-none hover-green d-flex align-items-center"
+                      ><i
+                        class="fas fa-chevron-right me-2"
+                        style="color: #6ac82a; font-size: 0.8rem"
+                      ></i>
+                      <span data-i18n="nav_about">Nosotros</span></a
+                    >
+                  </li>
+                  <li class="mb-2">
+                    <a
+                      href="productos.html"
+                      class="text-white text-decoration-none hover-green d-flex align-items-center"
+                      ><i
+                        class="fas fa-chevron-right me-2"
+                        style="color: #6ac82a; font-size: 0.8rem"
+                      ></i>
+                      <span data-i18n="nav_products">Productos</span></a
+                    >
+                  </li>
+                  <li class="mb-2">
+                    <a
+                      href="ficha.html"
+                      class="text-white text-decoration-none hover-green d-flex align-items-center"
+                      ><i
+                        class="fas fa-chevron-right me-2"
+                        style="color: #6ac82a; font-size: 0.8rem"
+                      ></i>
+                      <span data-i18n="nav_prices">Precio Semanal</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <a
+                      href="procesos.html"
+                      class="text-white text-decoration-none hover-green d-flex align-items-center"
+                      ><i
+                        class="fas fa-chevron-right me-2"
+                        style="color: #6ac82a; font-size: 0.8rem"
+                      ></i>
+                      <span data-i18n="nav_processes">Procesos</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="contacto.html"
+                      class="text-white text-decoration-none hover-green d-flex align-items-center"
+                      ><i
+                        class="fas fa-chevron-right me-2"
+                        style="color: #6ac82a; font-size: 0.8rem"
+                      ></i>
+                      <span data-i18n="nav_contact">Contacto</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4" style="border-color: rgba(255, 255, 255, 0.1)" />
+
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <p class="small text-muted mb-0">
+              &copy; 2023 Expofruto.
+              <span data-i18n="footer_rights"
+                >Todos los derechos reservados.</span
+              >
+            </p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <ul class="list-inline small mb-0">
+              <li class="list-inline-item">
+                <a
+                  href="avisoLegal.html"
+                  class="text-decoration-none text-white hover-green"
+                  data-i18n="footer.avisoLegal"
+                  >Aviso Legal</a
+                >
+              </li>
+              <li class="list-inline-item mx-2 text-white">•</li>
+              <li class="list-inline-item">
+                <a
+                  href="politica.html"
+                  class="text-decoration-none text-white hover-green"
+                  data-i18n="footer.politica"
+                  >Política de Privacidad</a
+                >
+              </li>
+              <li class="list-inline-item mx-2 text-white">•</li>
+              <li class="list-inline-item">
+                <a
+                  href="politicaCookies.html"
+                  class="text-decoration-none text-white hover-green"
+                  data-i18n="footer.cookies"
+                  >Política de Cookies</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="footer-deco position-absolute bottom-0 start-0 w-100"
+        style="
+          height: 4px;
+          background: linear-gradient(90deg, #6ac82a 0%, #1c1c1c 100%);
+        "
+      ></div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+      // Resaltar el enlace activo en la navbar
+      document.addEventListener("DOMContentLoaded", function () {
+        const currentPage =
+          window.location.pathname.split("/").pop() || "index.html";
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        navLinks.forEach((link) => {
+          const linkPage = link.getAttribute("href");
+          if (currentPage === linkPage) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+      });
+    </script>
+    <script>
+      AOS.init();
+
+      // Scroll horizontal para galerías
+      document.querySelectorAll(".galeria-horizontal").forEach((gallery) => {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        gallery.addEventListener("mousedown", (e) => {
+          isDown = true;
+          startX = e.pageX - gallery.offsetLeft;
+          scrollLeft = gallery.scrollLeft;
+        });
+
+        gallery.addEventListener("mouseleave", () => {
+          isDown = false;
+        });
+
+        gallery.addEventListener("mouseup", () => {
+          isDown = false;
+        });
+
+        gallery.addEventListener("mousemove", (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - gallery.offsetLeft;
+          const walk = (x - startX) * 2;
+          gallery.scrollLeft = scrollLeft - walk;
+        });
+      });
+    </script>
+    <script src="https://unpkg.com/i18next@21.6.14/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend@1.4.1/i18nextHttpBackend.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="js/procesos.js"></script>
+    <script src="js/procesosIdioma.js"></script>
+    <script src="js/idiomaIndex.js"></script>
+  </body>
+</html>

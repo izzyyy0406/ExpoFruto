@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Expofruto - Precios semanales de limón Tahití y aguacate Hass"
+    />
+    <title>Expofruto - Precios de la Semana</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/estilos.css" rel="stylesheet" />
+    <link href="css/decoraciones.css" rel="stylesheet" />
+   
+
+    <style>
+      
+      /* Estilos generales consistentes con el diseño */
+      body {
+        font-family: "Urbanist", sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+      }
+
+      .price-section {
+        padding: 80px 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .price-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+
+      .price-header {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .price-title {
+        color: #6ac82a;
+        font-weight: 700;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+      }
+
+      .price-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: #6ac82a;
+      }
+
+      .price-subtitle {
+        color: #666;
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .price-image-container {
+        text-align: center;
+        margin-bottom: 40px;
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      }
+
+      .price-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .price-btn-container {
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .btn-contact {
+        background: #6ac82a;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+      }
+
+      .btn-contact:hover {
+        background: #5ab020;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(90, 176, 32, 0.3);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .price-section {
+          padding: 60px 0;
+        }
+
+        .price-title {
+          font-size: 2rem;
+        }
+
+        .price-subtitle {
+          font-size: 1rem;
+        }
+
+        .price-image-container {
+          padding: 20px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .price-section {
+          padding: 40px 0;
+        }
+
+        .price-title {
+          font-size: 1.8rem;
+        }
+
+        .btn-contact {
+          padding: 10px 25px;
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header/Navbar (copiar el mismo de contacto.html) -->
+    <header class="fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-light navbar-solid">
+        <div class="container">
+          <a class="navbar-brand logo-container" href="index.html">
+            <img src="img/logo.png" alt="Expofruto" class="logo-img" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="index.html"
+                  data-i18n="nav.inicio"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="nosotros.html"
+                  data-i18n="nav.nosotros"
+                  >Nosotros</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="productos.html"
+                  data-i18n="nav.productos"
+                  >Productos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="procesos.html"
+                  data-i18n="nav.procesos"
+                  >Procesos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="contacto.html"
+                  data-i18n="nav.contacto"
+                  >Contacto</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ficha.html" data-i18n="nav.precios"
+                  >Precios de la semana</a
+                >
+              </li>
+            </ul>
+            <div class="dropdown ms-3">
+              <button
+                class="btn btn-sm dropdown-toggle language-dropdown"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                <img src="img/colombia.png" alt="Español" class="flag-icon" />
+                ES
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#" data-lang="es">
+                    <img
+                      src="img/colombia.png"
+                      alt="Español"
+                      class="flag-icon"
+                    />
+                    ES
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" data-lang="en">
+                    <img src="img/euu.png" alt="English" class="flag-icon" /> EN
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" data-lang="fr">
+                    <img
+                      src="img/francia.png"
+                      alt="Français"
+                      class="flag-icon"
+                    />
+                    FR
+                  </a>
+                </li>
+               <a class="dropdown-item" href="#" data-lang="it">
+                    <img src="img/italia.webp" alt="Italiano" class="flag-icon" />
+                    IT
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Sección principal -->
+    <main>
+      <section class="price-section">
+        <div class="price-container">
+          <div class="price-header">
+            <h1 class="price-title" data-i18n="price.title">
+              Precios de la Semana
+            </h1>
+            <p class="price-subtitle" data-i18n="price.subtitle">
+              Consulte los precios actualizados de nuestros productos de
+              exportación
+            </p>
+          </div>
+
+          <div class="price-image-container">
+            <img
+              src="img/precio.jpeg"
+              alt="Ficha de precios semanales"
+              class="price-image"
+            />
+          </div>
+
+          <div class="price-btn-container">
+            <a href="contacto.html" class="btn btn-contact">
+              <i class="fas fa-envelope me-2"></i>
+              <span data-i18n="price.contact_button"
+                >Contáctenos para más información</span
+              >
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (copiar el mismo de contacto.html) -->
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4 position-relative">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <!-- Logo y descripción -->
+          <div class="col-md-5 col-lg-4">
+            <div class="footer-logo-container mb-3">
+              <img
+                src="img/logo2.png"
+                alt="Expofruto"
+                class="footer-logo me-3"
+              />
+            </div>
+            <p class="text-muted mb-4" data-i18n="footer_description">
+              Exportamos calidad desde Colombia para el mundo.
+            </p>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/expofruto"
+                target="_blank"
+                class="text-white hover-green me-3"
+              >
+                <i class="fab fa-facebook-f fa-lg"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/expofruto"
+                target="_blank"
+                class="text-white hover-green me-3"
+              >
+                <i class="fab fa-instagram fa-lg"></i>
+              </a>
+              <a
+                href="https://wa.me/573104389536"
+                target="_blank"
+                class="text-white hover-green"
+              >
+                <i class="fab fa-whatsapp fa-lg"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contacto -->
+          <div class="col-md-7 col-lg-4">
+            <div class="footer-title">
+              <h5
+                class="text-uppercase mb-0"
+                style="
+                  color: #6ac82a;
+                  font-family: 'Montserrat', sans-serif;
+                  font-weight: 600;
+                "
+                data-i18n="footer_contact"
+              >
+                Contacto
+              </h5>
+            </div>
+            <ul class="list-unstyled contact-list">
+              <li class="mb-3 d-flex align-items-center">
+                <div
+                  class="contact-icon me-3 d-flex align-items-center justify-content-center"
+                  style="
+                    background-color: #ea4335;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                  "
+                >
+                  <i class="fas fa-envelope text-white"></i>
+                </div>
+                <div>
+                  <a
+                    href="mailto:gerencia@expofruto.com"
+                    class="text-white text-decoration-none hover-green"
+                    >gerencia@expofruto.com</a
+                  >
+                </div>
+              </li>
+              <li class="mb-3 d-flex align-items-center">
+                <div
+                  class="contact-icon me-3 d-flex align-items-center justify-content-center"
+                  style="
+                    background-color: #25d366;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                  "
+                >
+                  <i class="fab fa-whatsapp text-white"></i>
+                </div>
+                <div>
+                  <a
+                    href="https://wa.me/573104389536"
+                    target="_blank"
+                    class="text-white text-decoration-none hover-green"
+                    >+57 310 438 9536</a
+                  >
+                </div>
+              </li>
+              <li class="d-flex align-items-center">
+                <div
+                  class="contact-icon me-3 d-flex align-items-center justify-content-center"
+                  style="
+                    background-color: #4285f4;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                  "
+                >
+                  <i class="fas fa-map-marker-alt text-white"></i>
+                </div>
+                <div>
+                  <span class="text-white"
+                    >Calle Atardeceres de Jaibaná, Vereda Cerritos, 660007
+                    Pereira</span
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Enlaces rápidos -->
+          <div class="col-md-12 col-lg-4 mt-4 mt-lg-0">
+            <div class="footer-title">
+              <h5
+                class="text-uppercase mb-0"
+                style="
+                  color: #6ac82a;
+                  font-family: 'Montserrat', sans-serif;
+                  font-weight: 600;
+                "
+                data-i18n="footer_links"
+              >
+                Enlaces Rápidos
+              </h5>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <a
+                      href="nosotros.html"
+                      class="text-white text-decoration-none hover-green d-flex align-items-center"
+                      ><i
+                        class="fas fa-chevron-right me-2"
+                        style="color: #6ac82a; font-size: 0.8rem"
+                      ></i>
+                      <span data-i18n="nav_about">Nosotros</span></a
+                    >
+                  </li>
+                  <li class="mb-2">
+                    <a
+                      href="productos.html"
+                      class="text-white text-decoration-none hover-green d-flex align-items-center"
+                      ><i
+                        class="fas fa-chevron-right me-2"
+                        style="color: #6ac82a; font-size: 0.8rem"
+                      ></i>
+                      <span data-i18n="nav_products">Productos</span></a
+                    >
+                  </li>
+                  <li class="mb-2">
+                    <a
+                      href="ficha.html"
+                      class="text-white text-decoration-none hover-green d-flex align-items-center"
+                      ><i
+                        class="fas fa-chevron-right me-2"
+                        style="color: #6ac82a; font-size: 0.8rem"
+                      ></i>
+                      <span data-i18n="nav_prices">Precio Semanal</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <a
+                      href="procesos.html"
+                      class="text-white text-decoration-none hover-green d-flex align-items-center"
+                      ><i
+                        class="fas fa-chevron-right me-2"
+                        style="color: #6ac82a; font-size: 0.8rem"
+                      ></i>
+                      <span data-i18n="nav_processes">Procesos</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="contacto.html"
+                      class="text-white text-decoration-none hover-green d-flex align-items-center"
+                      ><i
+                        class="fas fa-chevron-right me-2"
+                        style="color: #6ac82a; font-size: 0.8rem"
+                      ></i>
+                      <span data-i18n="nav_contact">Contacto</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4" style="border-color: rgba(255, 255, 255, 0.1)" />
+
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <p class="small text-muted mb-0">
+              &copy; 2023 Expofruto.
+              <span data-i18n="footer_rights"
+                >Todos los derechos reservados.</span
+              >
+            </p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <ul class="list-inline small mb-0">
+              <li class="list-inline-item">
+                <a href="avisoLegal.html" class="text-decoration-none text-white hover-green" data-i18n="footer.avisoLegal">Aviso Legal</a>
+              </li>
+              <li class="list-inline-item mx-2 text-white">•</li>
+              <li class="list-inline-item">
+                <a href="politica.html" class="text-decoration-none text-white hover-green" data-i18n="footer.politica">Política de Privacidad</a>
+              </li>
+              <li class="list-inline-item mx-2 text-white">•</li>
+              <li class="list-inline-item">
+                <a href="politicaCookies.html" class="text-decoration-none text-white hover-green" data-i18n="footer.cookies">Política de Cookies</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="footer-deco position-absolute bottom-0 start-0 w-100"
+        style="
+          height: 4px;
+          background: linear-gradient(90deg, #6ac82a 0%, #1c1c1c 100%);
+        "
+      ></div>
+    </footer>
+        <script>
+// Resaltar el enlace activo en la navbar
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute('href');
+        if (currentPage === linkPage) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+});
+</script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/fichaIdioma.js" defer></script>
+  </body>
+</html>

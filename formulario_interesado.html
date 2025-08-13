@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expofruto - Soy Comprador</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Urbanist:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/formularioInte.css" rel="stylesheet" />
+    <link href="css/estilos.css" rel="stylesheet" />
+    <link href="css/decoraciones.css" rel="stylesheet" />
+    <style>
+      /* Estilos adicionales para validaciones */
+      .is-valid {
+        border-color: #28a745 !important;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right calc(0.375em + 0.1875rem) center;
+        background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+      }
+
+      .is-invalid {
+        border-color: #dc3545 !important;
+      }
+
+      .cultivos-container.invalid {
+        border: 1px solid #dc3545 !important;
+      }
+
+      .form-check-input.is-invalid ~ .form-check-label {
+        color: #dc3545;
+      }
+
+      .form-check-input.is-valid ~ .form-check-label {
+        color: #28a745;
+      }
+
+      #privacidad.is-invalid {
+        outline: 2px solid #dc3545;
+      }
+
+      .cultivos-container.invalid-feedback {
+        display: block;
+        width: 100%;
+        margin-top: 0.25rem;
+        font-size: 0.875em;
+        color: #dc3545;
+      }
+
+      /* Estilo para el título del formulario */
+      .form-card .card-header {
+        background-color: #28a745;
+      }
+      .form-card .card-header h3 {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header/Navbar -->
+    <header class="fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-light navbar-solid">
+        <div class="container">
+          <a class="navbar-brand logo-container" href="index.html">
+            <img src="img/logo.png" alt="Expofruto" class="logo-img" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="index.html"
+                  data-i18n="nav.inicio"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="nosotros.html"
+                  data-i18n="nav.nosotros"
+                  >Nosotros</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="productos.html"
+                  data-i18n="nav.productos"
+                  >Productos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="procesos.html"
+                  data-i18n="nav.procesos"
+                  >Procesos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="contacto.html"
+                  data-i18n="nav.contacto"
+                  >Contacto</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ficha.html" data-i18n="nav.precios"
+                  >Precios de la semana</a
+                >
+              </li>
+            </ul>
+            <div class="dropdown ms-3">
+              <button
+                class="btn btn-sm dropdown-toggle language-dropdown"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                <img src="img/colombia.png" alt="Español" class="flag-icon" />
+                ES
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#" data-lang="es">
+                    <img
+                      src="img/colombia.png"
+                      alt="Español"
+                      class="flag-icon"
+                    />
+                    ES
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" data-lang="en">
+                    <img src="img/euu.png" alt="English" class="flag-icon" /> EN
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" data-lang="fr">
+                    <img
+                      src="img/francia.png"
+                      alt="Français"
+                      class="flag-icon"
+                    />
+                    FR
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" data-lang="it">
+                    <img
+                      src="img/italia.webp"
+                      alt="Italiano"
+                      class="flag-icon"
+                    />
+                    IT
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section para Compradores -->
+    <section class="hero-comprador py-5" style="padding-top: 200px">
+      <div class="decoracion">
+        <img src="img/circulo.png" alt="circulo" class="circulo circulo1" />
+        <img src="img/circulo.png" alt="circulo" class="circulo circulo2" />
+        <img src="img/circulo.png" alt="circulo" class="circulo circulo3" />
+        <img src="img/circulo.png" alt="circulo" class="circulo circulo4" />
+        <img src="img/circulo.png" alt="circulo" class="circulo circulo5" />
+        <img src="img/circulo.png" alt="circulo" class="circulo circulo6" />
+      </div>
+
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Columna de texto -->
+          <div class="col-lg-6 order-lg-1 order-md-2">
+            <h1 class="display-4 mb-4 fw-medium" data-i18n="comprador.titulo">
+              Fruta colombiana premium para tu mercado
+            </h1>
+            <p class="lead mb-4" data-i18n="comprador.subtitulo">
+              Complete el formulario y nos pondremos en contacto para ofrecerle
+              los mejores productos colombianos.
+            </p>
+            <div class="d-flex align-items-center mb-3">
+              <i class="fas fa-check-circle me-3 fs-4 text-success"></i>
+              <span class="fw-medium" data-i18n="comprador.beneficio1"
+                >Calidad certificada internacionalmente</span
+              >
+            </div>
+            <div class="d-flex align-items-center mb-3">
+              <i class="fas fa-check-circle me-3 fs-4 text-success"></i>
+              <span class="fw-medium" data-i18n="comprador.beneficio2"
+                >Logística integral puerta a puerta</span
+              >
+            </div>
+            <div class="d-flex align-items-center">
+              <i class="fas fa-check-circle me-3 fs-4 text-success"></i>
+              <span class="fw-medium" data-i18n="comprador.beneficio3"
+                >Flexibilidad en volúmenes y frecuencias</span
+              >
+            </div>
+            <div class="decoracion-aguacate">
+              <img
+                src="img/frutas/aguacateDec3.png"
+                alt="Aguacate decorativo"
+                class="aguacate"
+              />
+            </div>
+          </div>
+
+          <!-- Columna del formulario -->
+          <div class="col-lg-6 order-lg-2 order-md-1 mb-4 mb-lg-0">
+            <div class="card form-card shadow-lg border-0">
+              <div class="card-header py-3">
+                <h3
+                  class="mb-0 text-center fw-bold"
+                  data-i18n="formulario.titulo"
+                >
+                  <i class="fas fa-globe-americas me-2 text-white"></i>Contacto
+                  para Comercializadores
+                </h3>
+              </div>
+              <div class="card-body p-4">
+                <form
+                  id="formularioComprador"
+                  class="needs-validation"
+                  novalidate
+                  action="https://formsubmit.co/gerencia@expofruto.com"
+                  method="POST"
+                >
+                  <!-- ✅ Honeypot: campo oculto para bots -->
+                  <input type="text" name="_honey" style="display: none" />
+
+                  <!-- ✅ Redirige tras envío correcto -->
+                  <input type="hidden" name="_next" value="gracias.html" />
+
+                  <!-- ✅ Desactiva CAPTCHA de FormSubmit si ya usas el honeypot -->
+                  <input type="hidden" name="_captcha" value="false" />
+
+                  <input type="hidden" name="_template" value="table" />
+                  <input
+                    type="hidden"
+                    name="_subject"
+                    value="Nuevo formulario de INTERESADO"
+                  />
+
+                  <input
+                    type="hidden"
+                    name="formulario"
+                    value="Formulario Interesado"
+                  />
+
+                  <div class="mb-3">
+                    <label
+                      for="nombre"
+                      class="form-label"
+                      data-i18n="formulario.nombre"
+                      >Nombre *</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nombre"
+                      name="nombre"
+                      required
+                      pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+"
+                    />
+                    <div
+                      class="invalid-feedback"
+                      data-i18n="formulario.error_nombre"
+                    >
+                      Por favor ingrese solo letras y espacios.
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label
+                      for="apellido"
+                      class="form-label"
+                      data-i18n="formulario.apellido"
+                      >Apellido *</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="apellido"
+                      name="apellido"
+                      required
+                      pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+"
+                    />
+                    <div
+                      class="invalid-feedback"
+                      data-i18n="formulario.error_apellido"
+                    >
+                      Por favor ingrese solo letras y espacios.
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label
+                      for="empresa"
+                      class="form-label"
+                      data-i18n="formulario.empresa"
+                      >Empresa</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="empresa"
+                      name="empresa"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label
+                      for="email"
+                      class="form-label"
+                      data-i18n="formulario.email"
+                      >Correo Electrónico *</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      required
+                      pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                    />
+                    <div
+                      class="invalid-feedback"
+                      data-i18n="formulario.error_email"
+                    >
+                      Por favor ingrese un correo electrónico válido (ejemplo:
+                      usuario@dominio.com).
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label
+                      for="telefono"
+                      class="form-label"
+                      data-i18n="formulario.telefono"
+                      >Número de Teléfono *</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="telefono"
+                      name="telefono"
+                      required
+                      pattern="[0-9]{7,15}"
+                    />
+                    <div
+                      class="invalid-feedback"
+                      data-i18n="formulario.error_telefono"
+                    >
+                      Por favor ingrese un número de teléfono válido (solo
+                      números, 7-15 dígitos).
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label
+                        for="ciudad"
+                        class="form-label"
+                        data-i18n="formulario.ciudad"
+                        >Ciudad *</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="ciudad"
+                        name="ciudad"
+                        required
+                        pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s\-,.]+"
+                      />
+                      <div
+                        class="invalid-feedback"
+                        data-i18n="formulario.error_ciudad"
+                      >
+                        Por favor ingrese un nombre de ciudad válido.
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label
+                        for="pais"
+                        class="form-label"
+                        data-i18n="formulario.pais"
+                        >País *</label
+                      >
+                      <select
+                        class="form-select"
+                        id="pais"
+                        name="pais"
+                        required
+                      >
+                        <option
+                          value=""
+                          selected
+                          disabled
+                          data-i18n="formulario.seleccione_pais"
+                        >
+                          Seleccione un país
+                        </option>
+                        <option value="Alemania">Alemania</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Bélgica">Bélgica</option>
+                        <option value="Bulgaria">Bulgaria</option>
+                        <option value="Canadá">Canadá</option>
+                        <option value="Chile">Chile</option>
+                        <option value="Chipre">Chipre</option>
+                        <option value="Croacia">Croacia</option>
+                        <option value="Dinamarca">Dinamarca</option>
+                        <option value="Emiratos Árabes Unidos">
+                          Emiratos Árabes Unidos
+                        </option>
+                        <option value="Eslovaquia">Eslovaquia</option>
+                        <option value="Eslovenia">Eslovenia</option>
+                        <option value="España">España</option>
+                        <option value="Estonia">Estonia</option>
+                        <option value="Finlandia">Finlandia</option>
+                        <option value="Francia">Francia</option>
+                        <option value="Grecia">Grecia</option>
+                        <option value="Hungría">Hungría</option>
+                        <option value="Irlanda">Irlanda</option>
+                        <option value="Islas del Caribe">
+                          Islas del Caribe
+                        </option>
+                        <option value="Italia">Italia</option>
+                        <option value="Letonia">Letonia</option>
+                        <option value="Lituania">Lituania</option>
+                        <option value="Luxemburgo">Luxemburgo</option>
+                        <option value="Malta">Malta</option>
+                        <option value="Países Bajos">Países Bajos</option>
+                        <option value="Polonia">Polonia</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="República Checa">República Checa</option>
+                        <option value="Rumanía">Rumanía</option>
+                        <option value="Suecia">Suecia</option>
+                        <option value="Estados Unidos">Estados Unidos</option>
+                        <option value="Otro">Otro</option>
+                      </select>
+                      <div
+                        class="invalid-feedback"
+                        data-i18n="formulario.error_pais"
+                      >
+                        Por favor seleccione un país.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label
+                      class="form-label"
+                      data-i18n="formulario.productos_interes"
+                      >¿Qué productos le interesan? *</label
+                    >
+                    <div class="cultivos-container bg-light p-3 rounded-3">
+                      <p
+                        class="small text-muted mb-3"
+                        data-i18n="formulario.seleccion_maxima"
+                      >
+                        Selecciona máximo 2 productos principales:
+                      </p>
+                      <div class="row g-3">
+                        <div class="col-md-6">
+                          <div class="form-check card-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="productos_interes"
+                              value="limon"
+                              id="limon"
+                            />
+                            <label
+                              class="form-check-label card-check-label"
+                              for="limon"
+                            >
+                              <div class="d-flex align-items-center">
+                                <span data-i18n="productos.limon"
+                                  >Limón Tahití</span
+                                >
+                              </div>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-check card-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              name="productos_interes"
+                              value="aguacate"
+                              id="aguacate"
+                            />
+                            <label
+                              class="form-check-label card-check-label"
+                              for="aguacate"
+                            >
+                              <div class="d-flex align-items-center">
+                                <span data-i18n="productos.aguacate"
+                                  >Aguacate Hass</span
+                                >
+                              </div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Campo adicional para otros productos -->
+                      <div id="otrosProductosContainer" class="mt-3 d-none">
+                        <label
+                          for="otrosProductos"
+                          class="form-label small"
+                          data-i18n="formulario.especificar_productos"
+                          >Especifica qué otros productos te interesan:</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="otrosProductos"
+                          name="otros_productos"
+                          placeholder="Ej: Mango, Piña, Guanábana..."
+                          data-i18n="[placeholder]formulario.ejemplo_productos"
+                        />
+                        <div
+                          class="invalid-feedback"
+                          data-i18n="formulario.error_productos"
+                        >
+                          Por favor especifica qué otros productos te interesan.
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="invalid-feedback"
+                      data-i18n="formulario.error_seleccion_productos"
+                    >
+                      Por favor seleccione al menos un producto (máximo 2).
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label
+                      for="mensaje"
+                      class="form-label"
+                      data-i18n="formulario.requerimientos"
+                      >Requerimientos específicos</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="mensaje"
+                      name="mensaje"
+                      rows="3"
+                      placeholder="Ej: Cantidad estimada, frecuencia de envío, certificaciones requeridas, etc."
+                      data-i18n="[placeholder]formulario.ejemplo_requerimientos"
+                    ></textarea>
+                  </div>
+                  <div class="form-check mb-4">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="privacidad"
+                      name="privacidad"
+                      required
+                    />
+                    <label class="form-check-label small" for="privacidad">
+                      <span data-i18n="formulario.acepto">Acepto la</span>
+                      <a
+                        href="#"
+                        class="text-decoration-none"
+                        data-i18n="formulario.politica_privacidad"
+                        >Política de Privacidad</a
+                      >
+                      <span data-i18n="formulario.autorizo"
+                        >y autorizo el tratamiento de mis datos.</span
+                      >
+                    </label>
+                    <div
+                      class="invalid-feedback"
+                      data-i18n="formulario.error_terminos"
+                    >
+                      Debe aceptar los términos para continuar.
+                    </div>
+                  </div>
+                  <div class="d-grid">
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-lg py-3 fw-bold"
+                      data-i18n="formulario.enviar_solicitud"
+                    >
+                      <i class="fas fa-paper-plane me-2"></i>Enviar Solicitud
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits-buyers py-5">
+      <div class="container">
+        <h2 class="text-center mb-5 fw-bold" data-i18n="beneficios.titulo">
+          Por qué elegirnos como proveedor
+        </h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="benefit-item text-center p-4 rounded-3 h-100">
+              <div class="icon-wrapper mb-3">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <h4 class="fw-bold" data-i18n="beneficios.certificaciones">
+                Certificaciones Internacionales
+              </h4>
+              <p class="mb-0" data-i18n="beneficios.certificaciones_desc">
+                USDA, FDA y Union Europea
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="benefit-item text-center p-4 rounded-3 h-100">
+              <div class="icon-wrapper mb-3">
+                <i class="fas fa-shipping-fast"></i>
+              </div>
+              <h4 class="fw-bold" data-i18n="beneficios.logistica">
+                Logística Confiable
+              </h4>
+              <p class="mb-0" data-i18n="beneficios.logistica_desc">
+                Envíos marítimos y aéreos con trazabilidad completa.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="benefit-item text-center p-4 rounded-3 h-100">
+              <div class="icon-wrapper mb-3">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <h4 class="fw-bold" data-i18n="beneficios.disponibilidad">
+                Disponibilidad Todo el Año
+              </h4>
+              <p class="mb-0" data-i18n="beneficios.disponibilidad_desc">
+                Gracias a nuestras múltiples zonas de cultivo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4 position-relative">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <!-- Logo y descripción -->
+          <div class="col-md-5 col-lg-4">
+            <div class="footer-logo-container mb-3">
+              <img
+                src="img/logo2.png"
+                alt="Expofruto"
+                class="footer-logo me-3"
+              />
+            </div>
+            <p class="text-muted mb-4" data-i18n="footer.descripcion">
+              Exportamos calidad desde Colombia para el mundo.
+            </p>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/expofruto"
+                target="_blank"
+                class="text-white hover-green me-3"
+              >
+                <i class="fab fa-facebook-f fa-lg"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/expofruto"
+                target="_blank"
+                class="text-white hover-green me-3"
+              >
+                <i class="fab fa-instagram fa-lg"></i>
+              </a>
+              <a
+                href="https://wa.me/573104389536"
+                target="_blank"
+                class="text-white hover-green"
+              >
+                <i class="fab fa-whatsapp fa-lg"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contacto -->
+          <div class="col-md-7 col-lg-4">
+            <div class="footer-title">
+              <h5
+                class="text-uppercase mb-0"
+                style="
+                  color: #6ac82a;
+                  font-family: 'Montserrat', sans-serif;
+                  font-weight: 600;
+                "
+                data-i18n="footer.contacto.titulo"
+              >
+                Contacto
+              </h5>
+            </div>
+            <ul class="list-unstyled contact-list">
+              <li class="mb-3 d-flex align-items-center">
+                <div
+                  class="contact-icon me-3 d-flex align-items-center justify-content-center"
+                  style="
+                    background-color: #ea4335;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                  "
+                >
+                  <i class="fas fa-envelope text-white"></i>
+                </div>
+                <div>
+                  <a
+                    href="mailto:gerencia@expofruto.com"
+                    class="text-white text-decoration-none hover-green"
+                    >gerencia@expofruto.com</a
+                  >
+                </div>
+              </li>
+              <li class="mb-3 d-flex align-items-center">
+                <div
+                  class="contact-icon me-3 d-flex align-items-center justify-content-center"
+                  style="
+                    background-color: #25d366;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                  "
+                >
+                  <i class="fab fa-whatsapp text-white"></i>
+                </div>
+                <div>
+                  <a
+                    href="https://wa.me/573104389536"
+                    target="_blank"
+                    class="text-white text-decoration-none hover-green"
+                    >+57 310 438 9536</a
+                  >
+                </div>
+              </li>
+              <li class="d-flex align-items-center">
+                <div
+                  class="contact-icon me-3 d-flex align-items-center justify-content-center"
+                  style="
+                    background-color: #4285f4;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                  "
+                >
+                  <i class="fas fa-map-marker-alt text-white"></i>
+                </div>
+                <div>
+                  <span class="text-white" data-i18n="footer.contacto.direccion"
+                    >Calle Atardeceres de Jaibaná, Vereda Cerritos, 660007
+                    Pereira</span
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Enlaces rápidos -->
+          <div class="col-md-12 col-lg-4 mt-4 mt-lg-0">
+            <div class="footer-title">
+              <h5
+                class="text-uppercase mb-0"
+                style="
+                  color: #6ac82a;
+                  font-family: 'Montserrat', sans-serif;
+                  font-weight: 600;
+                "
+                data-i18n="footer.enlaces.titulo"
+              >
+                Enlaces Rápidos
+              </h5>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <a
+                      href="nosotros.html"
+                      class="text-white text-decoration-none hover-green d-flex align-items-center"
+                      ><i
+                        class="fas fa-chevron-right me-2"
+                        style="color: #6ac82a; font-size: 0.8rem"
+                      ></i>
+                      <span data-i18n="footer.enlaces.item1">Nosotros</span></a
+                    >
+                  </li>
+                  <li class="mb-2">
+                    <a
+                      href="productos.html"
+                      class="text-white text-decoration-none hover-green d-flex align-items-center"
+                      ><i
+                        class="fas fa-chevron-right me-2"
+                        style="color: #6ac82a; font-size: 0.8rem"
+                      ></i>
+                      <span data-i18n="footer.enlaces.item2">Productos</span></a
+                    >
+                  </li>
+                  <li class="mb-2">
+                    <a
+                      href="ficha.html"
+                      class="text-white text-decoration-none hover-green d-flex align-items-center"
+                      ><i
+                        class="fas fa-chevron-right me-2"
+                        style="color: #6ac82a; font-size: 0.8rem"
+                      ></i>
+                      <span data-i18n="footer.enlaces.item3"
+                        >Precio Semanal</span
+                      ></a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <a
+                      href="procesos.html"
+                      class="text-white text-decoration-none hover-green d-flex align-items-center"
+                      ><i
+                        class="fas fa-chevron-right me-2"
+                        style="color: #6ac82a; font-size: 0.8rem"
+                      ></i>
+                      <span data-i18n="footer.enlaces.item4">Procesos</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="contacto.html"
+                      class="text-white text-decoration-none hover-green d-flex align-items-center"
+                      ><i
+                        class="fas fa-chevron-right me-2"
+                        style="color: #6ac82a; font-size: 0.8rem"
+                      ></i>
+                      <span data-i18n="footer.enlaces.item5">Contacto</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4" style="border-color: rgba(255, 255, 255, 0.1)" />
+
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <p class="small text-muted mb-0" data-i18n="footer.copyright">
+              &copy; 2023 Expofruto. Todos los derechos reservados.
+            </p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <ul class="list-inline small mb-0">
+              <li class="list-inline-item">
+                <a
+                  href="avisoLegal.html"
+                  class="text-decoration-none text-white hover-green"
+                  data-i18n="footer.avisoLegal"
+                  >Aviso Legal</a
+                >
+              </li>
+              <li class="list-inline-item mx-2 text-white">•</li>
+              <li class="list-inline-item">
+                <a
+                  href="politica.html"
+                  class="text-decoration-none text-white hover-green"
+                  data-i18n="footer.politica"
+                  >Política de Privacidad</a
+                >
+              </li>
+              <li class="list-inline-item mx-2 text-white">•</li>
+              <li class="list-inline-item">
+                <a
+                  href="politicaCookies.html"
+                  class="text-decoration-none text-white hover-green"
+                  data-i18n="footer.cookies"
+                  >Política de Cookies</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="footer-deco position-absolute bottom-0 start-0 w-100"
+        style="
+          height: 4px;
+          background: linear-gradient(90deg, #6ac82a 0%, #1c1c1c 100%);
+        "
+      ></div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/formularioInt.js"></script>
+    <script src="js/forInIdioma.js" defer></script>
+  </body>
+</html>

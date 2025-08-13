@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Expofruto - Nuestros productos de exportación: limón Tahití y aguacate Hass de la mejor calidad.">
+    <meta property="og:title" content="Expofruto - Nuestros Productos">
+    <meta property="og:description" content="Descubre nuestros productos premium de exportación desde Colombia.">
+    <meta property="og:image" content="img/logo.png">
+    <meta property="og:url" content="https://www.expofruto.com/productos.html">
+    <title>Expofruto - Nuestros Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="css/estilos.css" rel="stylesheet">
+    <link href="css/productos.css" rel="stylesheet">
+    <link href="css/decoraciones.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Italianno&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/6.6.6/css/flag-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Italianno&family=Quicksand:wght@300..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header/Navbar -->
+        <header class="fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-light navbar-solid">
+        <div class="container">
+          <a class="navbar-brand logo-container" href="index.html">
+            <img src="img/logo.png" alt="Expofruto" class="logo-img" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="index.html"
+                  data-i18n="nav.inicio"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="nosotros.html"
+                  data-i18n="nav.nosotros"
+                  >Nosotros</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="productos.html"
+                  data-i18n="nav.productos"
+                  >Productos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="procesos.html"
+                  data-i18n="nav.procesos"
+                  >Procesos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="contacto.html"
+                  data-i18n="nav.contacto"
+                  >Contacto</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ficha.html" data-i18n="nav.precios"
+                  >Precios de la semana</a
+                >
+              </li>
+            </ul>
+            <div class="dropdown ms-3">
+              <button
+                class="btn btn-sm dropdown-toggle language-dropdown"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                <img src="img/colombia.png" alt="Español" class="flag-icon" />
+                ES
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#" data-lang="es">
+                    <img
+                      src="img/colombia.png"
+                      alt="Español"
+                      class="flag-icon"
+                    />
+                    ES
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" data-lang="en">
+                    <img src="img/euu.png" alt="English" class="flag-icon" /> EN
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" data-lang="fr">
+                    <img
+                      src="img/francia.png"
+                      alt="Français"
+                      class="flag-icon"
+                    />
+                    FR
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" data-lang="it">
+                    <img
+                      src="img/italia.webp"
+                      alt="Italiano"
+                      class="flag-icon"
+                    />
+                    IT
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+  <!-- Sección Hero Productos -->
+<section class="productos-hero py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h1 class="titulo-productos mb-4" data-i18n="products.hero.title">Nuestros Productos</h1>
+                <p class="lead" data-i18n="products.hero.subtitle">Exportamos la mejor calidad desde el corazón de Colombia</p>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="decoraciones">
+        <!-- Contenedor de las decoraciones -->
+        <img
+          src="img/deco2.png"
+          class="decoracion-right"
+          alt="Decoración derecha"
+        />
+        <img
+          src="img/deco3.png"
+          class="decoracion-left"
+          alt="Decoración izquierda"
+        />
+      </div>
+<!-- Galería Vintage -->
+<section class="galeria-vintage-modificada py-5">
+     <div class="decoracion">
+    <img src="img/circulo.png" alt="circulo" class="circulo circulo1" />
+    <img src="img/circulo.png" alt="circulo" class="circulo circulo2" />
+    <img src="img/circulo.png" alt="circulo" class="circulo circulo3" />
+    <img src="img/circulo.png" alt="circulo" class="circulo circulo4" />
+    <img src="img/circulo.png" alt="circulo" class="circulo circulo5" />
+    <img src="img/circulo.png" alt="circulo" class="circulo circulo6" />
+  </div>
+
+<div class="container">
+    <div class="row g-4 justify-content-center">
+        <!-- Limón Tahití -->
+        <div class="col-md-6 col-lg-5">
+<a href="#limon-tahiti" class="cuadro-fruta-link">
+    <div class="cuadro-fruta">
+        <div class="cuadro-imagen" style="background-color: #a8e7ad;">
+            <img src="img/frutas/limonTahiti.png" alt="Limón Tahití" class="img-fluid">
+        </div>
+        <div class="cuadro-titulo">
+            <h3 data-i18n="products.limon.title">Limón Tahití</h3>
+        </div>
+    </div>
+</a>
+</div>
+
+<!-- Aguacate Hass -->
+<div class="col-md-6 col-lg-5">
+<a href="#aguacate-hass" class="cuadro-fruta-link">
+    <div class="cuadro-fruta">
+        <div class="cuadro-imagen" style="background-color: #daaba1;">
+            <img src="img/frutas/aguacateHass.png" alt="Aguacate Hass" class="img-fluid">
+        </div>
+        <div class="cuadro-titulo">
+            <h3 data-i18n="products.aguacate.title">Aguacate Hass</h3>
+        </div>
+    </div>
+</a>
+</div>
+
+<!-- Botones de navegación -->
+<div class="col-12 text-center mt-4">
+    <a href="#beneficios" class="btn btn-outline-success mx-2" data-i18n="products.buttons.benefits">Ver Beneficios</a>
+    <a href="#recetas" class="btn btn-outline-success mx-2" data-i18n="products.buttons.recipes">Ver Recetas</a>
+</div>
+</section>
+
+<!-- Sección de Propiedades y Beneficios -->
+<section class="propiedades-frutas py-5" id="beneficios">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title" data-i18n="benefits.title">Beneficios y Propiedades</h2>
+            <p class="section-subtitle" data-i18n="benefits.subtitle">Descubre todo lo que nuestros productos pueden ofrecerte</p>
+        </div>
+        
+        <!-- Limón Tahití -->
+        <div class="fruta-card mb-5" id="limon-tahiti">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="img/frutas/limon2.png" alt="Limón Tahití" class="img-fluid fruta-img">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fruta-title" data-i18n="products.limon.title">Limón Tahití</h2>
+                    <div class="fruta-props">
+                        <div class="prop-item">
+                            <i class="fas fa-leaf prop-icon"></i>
+                            <div>
+                                <h4 data-i18n="benefits.nutrition.title">Propiedades Nutricionales</h4>
+                                <p data-i18n="benefits.limon.nutrition">Alto contenido de vitamina C, antioxidantes y minerales esenciales.</p>
+                            </div>
+                        </div>
+                        <div class="prop-item">
+                            <i class="fas fa-heart prop-icon"></i>
+                            <div>
+                                <h4 data-i18n="benefits.health.title">Beneficios para la Salud</h4>
+                                <p data-i18n="benefits.limon.health">Refuerza el sistema inmunológico, mejora la digestión y ayuda a la absorción de hierro.</p>
+                            </div>
+                        </div>
+                        <div class="prop-item">
+                            <i class="fas fa-globe-americas prop-icon"></i>
+                            <div>
+                                <h4 data-i18n="benefits.culinary.title">Usos Culinarios</h4>
+                                <p data-i18n="benefits.limon.culinary">Ideal para bebidas, aderezos, postres y como realzador de sabores.</p>
+                            </div>
+                        </div>
+                        <div class="prop-item">
+                            <i class="fas fa-spa prop-icon"></i>
+                            <div>
+                                <h4 data-i18n="benefits.beauty.title">Usos en Belleza</h4>
+                                <p data-i18n="benefits.limon.beauty">Excelente para aclarar la piel, tratar el acné y fortalecer las uñas. También se usa en mascarillas capilares para dar brillo al cabello.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Aguacate Hass -->
+        <div class="fruta-card" id="aguacate-hass">
+            <div class="row align-items-center flex-lg-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="img/frutas/aguacateDec2.png" alt="Aguacate Hass" class="img-fluid fruta-img">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fruta-title" data-i18n="products.aguacate.title">Aguacate Hass</h2>
+                    <div class="fruta-props">
+                        <div class="prop-item">
+                            <i class="fas fa-leaf prop-icon"></i>
+                            <div>
+                                <h4 data-i18n="benefits.nutrition.title">Propiedades Nutricionales</h4>
+                                <p data-i18n="benefits.aguacate.nutrition">Rico en grasas saludables, fibra, vitaminas E, C, B6 y potasio.</p>
+                            </div>
+                        </div>
+                        <div class="prop-item">
+                            <i class="fas fa-heart prop-icon"></i>
+                            <div>
+                                <h4 data-i18n="benefits.health.title">Beneficios para la Salud</h4>
+                                <p data-i18n="benefits.aguacate.health">Mejora la salud cardiovascular, reduce el colesterol y promueve la salud de la piel.</p>
+                            </div>
+                        </div>
+                        <div class="prop-item">
+                            <i class="fas fa-globe-americas prop-icon"></i>
+                            <div>
+                                <h4 data-i18n="benefits.culinary.title">Usos Culinarios</h4>
+                                <p data-i18n="benefits.aguacate.culinary">Perfecto para guacamole, ensaladas, tostadas y como sustituto saludable de grasas.</p>
+                            </div>
+                        </div>
+                        <div class="prop-item">
+                            <i class="fas fa-spa prop-icon"></i>
+                            <div>
+                                <h4 data-i18n="benefits.beauty.title">Usos en Belleza</h4>
+                                <p data-i18n="benefits.aguacate.beauty">Ideal para mascarillas faciales hidratantes, tratamientos capilares profundos y como exfoliante natural mezclado con azúcar.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Galería de Recetas -->
+<section class="recetas-gallery py-5 bg-light" id="recetas">
+    <div class="container">
+        <h2 class="text-center mb-5" data-i18n="recipes.title">Recetas con Nuestros Productos</h2>
+        
+        <div class="recetas-carousel">
+            <div class="receta-item" data-bs-toggle="modal" data-bs-target="#recetaModal1">
+                <img src="img/recetas/guacamole2.avif" alt="Guacamole" class="img-fluid">
+                <div class="receta-overlay">
+                    <h4 data-i18n="recipes.guacamole.title">Guacamole Tradicional</h4>
+                    <p data-i18n="products.aguacate.title">Aguacate Hass</p>
+                </div>
+            </div>
+            <div class="receta-item" data-bs-toggle="modal" data-bs-target="#recetaModal2">
+                <img src="img/recetas/limonada.jpg" alt="Limonada" class="img-fluid">
+                <div class="receta-overlay">
+                    <h4 data-i18n="recipes.limonada.title">Limonada Colombiana</h4>
+                    <p data-i18n="products.limon.title">Limón Tahití</p>
+                </div>
+            </div>
+            <div class="receta-item" data-bs-toggle="modal" data-bs-target="#recetaModal3">
+                <img src="img/recetas/ensalada.jpg" alt="Ensalada" class="img-fluid">
+                <div class="receta-overlay">
+                    <h4 data-i18n="recipes.ensalada.title">Ensalada con Aguacate</h4>
+                    <p data-i18n="products.aguacate.title">Aguacate Hass</p>
+                </div>
+            </div>
+            <div class="receta-item" data-bs-toggle="modal" data-bs-target="#recetaModal4">
+                <img src="img/recetas/postre.jpg" alt="Postre de Limón" class="img-fluid">
+                <div class="receta-overlay">
+                    <h4 data-i18n="recipes.postre.title">Postre de Limón</h4>
+                    <p data-i18n="products.limon.title">Limón Tahití</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modales de Recetas -->
+<!-- Modal Receta 1 -->
+<div class="modal fade" id="recetaModal1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" data-i18n="recipes.guacamole.title">Guacamole Tradicional</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="img/recetas/guacamole2.avif" alt="Guacamole" class="img-fluid mb-3">
+                        <h4 data-i18n="recipes.ingredients">Ingredientes:</h4>
+                        <ul>
+                            <li data-i18n="recipes.guacamole.ingredients.1">2 aguacates Hass maduros</li>
+                            <li data-i18n="recipes.guacamole.ingredients.2">1 tomate mediano picado</li>
+                            <li data-i18n="recipes.guacamole.ingredients.3">1/4 cebolla picada</li>
+                            <li data-i18n="recipes.guacamole.ingredients.4">Jugo de 1 limón Tahití</li>
+                            <li data-i18n="recipes.guacamole.ingredients.5">Sal y pimienta al gusto</li>
+                            <li data-i18n="recipes.guacamole.ingredients.6">Cilantro fresco picado</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 data-i18n="recipes.preparation">Preparación:</h4>
+                        <ol>
+                            <li data-i18n="recipes.guacamole.steps.1">Corta los aguacates por la mitad, retira el hueso y saca la pulpa.</li>
+                            <li data-i18n="recipes.guacamole.steps.2">En un tazón, machaca la pulpa con un tenedor hasta obtener la textura deseada.</li>
+                            <li data-i18n="recipes.guacamole.steps.3">Añade el tomate, cebolla y cilantro picados.</li>
+                            <li data-i18n="recipes.guacamole.steps.4">Agrega el jugo de limón, sal y pimienta al gusto.</li>
+                            <li data-i18n="recipes.guacamole.steps.5">Mezcla suavemente todos los ingredientes.</li>
+                            <li data-i18n="recipes.guacamole.steps.6">Sirve inmediatamente con totopos o como acompañamiento.</li>
+                        </ol>
+                        <div class="receta-tips">
+                            <h5 data-i18n="recipes.tips">Tips:</h5>
+                            <p data-i18n="recipes.guacamole.tips">Para evitar que el guacamole se oxide, guarda un hueso del aguacate en el centro y cubre con plástico adherente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Receta 2 -->
+<div class="modal fade" id="recetaModal2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" data-i18n="recipes.limonada.title">Limonada Colombiana</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="img/recetas/limonada.jpg" alt="Limonada" class="img-fluid mb-3">
+                        <h4 data-i18n="recipes.ingredients">Ingredientes:</h4>
+                        <ul>
+                            <li data-i18n="recipes.limonada.ingredients.1">6 limones Tahití</li>
+                            <li data-i18n="recipes.limonada.ingredients.2">1 taza de azúcar (o al gusto)</li>
+                            <li data-i18n="recipes.limonada.ingredients.3">6 tazas de agua fría</li>
+                            <li data-i18n="recipes.limonada.ingredients.4">Hielo al gusto</li>
+                            <li data-i18n="recipes.limonada.ingredients.5">Hojas de hierbabuena (opcional)</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 data-i18n="recipes.preparation">Preparación:</h4>
+                        <ol>
+                            <li data-i18n="recipes.limonada.steps.1">Lava bien los limones y córtalos por la mitad.</li>
+                            <li data-i18n="recipes.limonada.steps.2">Exprime los limones para obtener su jugo, eliminando las semillas.</li>
+                            <li data-i18n="recipes.limonada.steps.3">En una jarra grande, disuelve el azúcar en una taza de agua tibia.</li>
+                            <li data-i18n="recipes.limonada.steps.4">Añade el jugo de limón y el resto del agua fría.</li>
+                            <li data-i18n="recipes.limonada.steps.5">Revuelve bien y prueba para ajustar el dulzor.</li>
+                            <li data-i18n="recipes.limonada.steps.6">Sirve en vasos con hielo y decora con hojas de hierbabuena.</li>
+                        </ol>
+                        <div class="receta-tips">
+                            <h5 data-i18n="recipes.tips">Tips:</h5>
+                            <p data-i18n="recipes.limonada.tips">Para una versión más refrescante, puedes licuar la cáscara de un limón (bien lavada) con un poco de agua y colar antes de mezclar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Receta 3 -->
+<div class="modal fade" id="recetaModal3" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" data-i18n="recipes.ensalada.title">Ensalada con Aguacate</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="img/recetas/ensalada.jpg" alt="Ensalada" class="img-fluid mb-3">
+                        <h4 data-i18n="recipes.ingredients">Ingredientes:</h4>
+                        <ul>
+                            <li data-i18n="recipes.ensalada.ingredients.1">1 aguacate Hass maduro</li>
+                            <li data-i18n="recipes.ensalada.ingredients.2">2 tazas de mezcla de lechugas</li>
+                            <li data-i18n="recipes.ensalada.ingredients.3">1 tomate mediano</li>
+                            <li data-i18n="recipes.ensalada.ingredients.4">1/4 cebolla morada</li>
+                            <li data-i18n="recipes.ensalada.ingredients.5">1/2 pepino</li>
+                            <li data-i18n="recipes.ensalada.ingredients.6">Jugo de 1 limón Tahití</li>
+                            <li data-i18n="recipes.ensalada.ingredients.7">2 cucharadas de aceite de oliva</li>
+                            <li data-i18n="recipes.ensalada.ingredients.8">Sal y pimienta al gusto</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 data-i18n="recipes.preparation">Preparación:</h4>
+                        <ol>
+                            <li data-i18n="recipes.ensalada.steps.1">Lava y desinfecta todas las verduras.</li>
+                            <li data-i18n="recipes.ensalada.steps.2">Corta el tomate en gajos, la cebolla en julianas y el pepino en rodajas.</li>
+                            <li data-i18n="recipes.ensalada.steps.3">En un tazón grande, mezcla las lechugas con el tomate, cebolla y pepino.</li>
+                            <li data-i18n="recipes.ensalada.steps.4">Pela y corta el aguacate en cubos, rocíalo con un poco de jugo de limón para evitar que se oxide.</li>
+                            <li data-i18n="recipes.ensalada.steps.5">Agrega el aguacate a la ensalada.</li>
+                            <li data-i18n="recipes.ensalada.steps.6">Prepara el aderezo mezclando el resto del jugo de limón con el aceite de oliva, sal y pimienta.</li>
+                            <li data-i18n="recipes.ensalada.steps.7">Vierte el aderezo sobre la ensalada y sirve inmediatamente.</li>
+                        </ol>
+                        <div class="receta-tips">
+                            <h5 data-i18n="recipes.tips">Tips:</h5>
+                            <p data-i18n="recipes.ensalada.tips">Puedes añadir queso feta o nueces para darle un toque extra de sabor y textura.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Receta 4 -->
+<div class="modal fade" id="recetaModal4" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" data-i18n="recipes.postre.title">Postre de Limón</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="img/recetas/postre.jpg" alt="Postre de Limón" class="img-fluid mb-3">
+                        <h4 data-i18n="recipes.ingredients">Ingredientes:</h4>
+                        <ul>
+                            <li data-i18n="recipes.postre.ingredients.1">1 taza de jugo de limón Tahití (4-5 limones)</li>
+                            <li data-i18n="recipes.postre.ingredients.2">1 lata de leche condensada</li>
+                            <li data-i18n="recipes.postre.ingredients.3">1 lata de crema de leche</li>
+                            <li data-i18n="recipes.postre.ingredients.4">1 paquete de galletas maría</li>
+                            <li data-i18n="recipes.postre.ingredients.5">1/2 taza de agua</li>
+                            <li data-i18n="recipes.postre.ingredients.6">Ralladura de 1 limón para decorar</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 data-i18n="recipes.preparation">Preparación:</h4>
+                        <ol>
+                            <li data-i18n="recipes.postre.steps.1">En la licuadora, mezcla el jugo de limón, la leche condensada y la crema de leche hasta obtener una mezcla homogénea.</li>
+                            <li data-i18n="recipes.postre.steps.2">En un molde rectangular, coloca una capa de galletas maría humedecidas ligeramente con agua.</li>
+                            <li data-i18n="recipes.postre.steps.3">Vierte una parte de la mezcla de limón sobre las galletas.</li>
+                            <li data-i18n="recipes.postre.steps.4">Repite las capas hasta terminar con una capa de crema de limón.</li>
+                            <li data-i18n="recipes.postre.steps.5">Refrigera por al menos 4 horas o preferiblemente toda la noche.</li>
+                            <li data-i18n="recipes.postre.steps.6">Antes de servir, decora con ralladura de limón.</li>
+                        </ol>
+                        <div class="receta-tips">
+                            <h5 data-i18n="recipes.tips">Tips:</h5>
+                            <p data-i18n="recipes.postre.tips">Para un toque especial, puedes agregar un poco de coco rallado entre las capas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sección de Precios (Placeholder) -->
+<section class="precios-section py-5">
+    <div class="container text-center">
+        <h2 class="mb-5" data-i18n="prices.title">Disponibilidad y Precios</h2>
+        <p class="lead mb-4" data-i18n="prices.subtitle">Contáctenos para conocer sobre disponibilidad, precios y condiciones de exportación.</p>
+        <a href="contacto.html" class="btn btn-contacto-precios" data-i18n="prices.button">Solicitar Información</a>
+    </div>
+</section>
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4 position-relative">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <!-- Logo y descripción -->
+          <div class="col-md-5 col-lg-4">
+            <div class="footer-logo-container mb-3">
+              <img
+                src="img/logo2.png"
+                alt="Expofruto"
+                class="footer-logo me-3"
+              />
+            </div>
+            <p class="text-muted mb-4" data-i18n="footer.descripcion">
+              Exportamos calidad desde Colombia para el mundo.
+            </p>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/expofruto"
+                target="_blank"
+                class="text-white hover-green me-3"
+              >
+                <i class="fab fa-facebook-f fa-lg"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/expofruto"
+                target="_blank"
+                class="text-white hover-green me-3"
+              >
+                <i class="fab fa-instagram fa-lg"></i>
+              </a>
+              <a
+                href="https://wa.me/573104389536"
+                target="_blank"
+                class="text-white hover-green"
+              >
+                <i class="fab fa-whatsapp fa-lg"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contacto -->
+          <div class="col-md-7 col-lg-4">
+            <div class="footer-title">
+              <h5
+                class="text-uppercase mb-0"
+                style="
+                  color: #6ac82a;
+                  font-family: 'Montserrat', sans-serif;
+                  font-weight: 600;
+                "
+                data-i18n="footer.contacto.titulo"
+              >
+                Contacto
+              </h5>
+            </div>
+            <ul class="list-unstyled contact-list">
+              <li class="mb-3 d-flex align-items-center">
+                <div
+                  class="contact-icon me-3 d-flex align-items-center justify-content-center"
+                  style="
+                    background-color: #ea4335;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                  "
+                >
+                  <i class="fas fa-envelope text-white"></i>
+                </div>
+                <div>
+                  <a
+                    href="mailto:gerencia@expofruto.com"
+                    class="text-white text-decoration-none hover-green"
+                    >gerencia@expofruto.com</a
+                  >
+                </div>
+              </li>
+              <li class="mb-3 d-flex align-items-center">
+                <div
+                  class="contact-icon me-3 d-flex align-items-center justify-content-center"
+                  style="
+                    background-color: #25d366;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                  "
+                >
+                  <i class="fab fa-whatsapp text-white"></i>
+                </div>
+                <div>
+                  <a
+                    href="https://wa.me/573104389536"
+                    target="_blank"
+                    class="text-white text-decoration-none hover-green"
+                    >+57 310 438 9536</a
+                  >
+                </div>
+              </li>
+              <li class="d-flex align-items-center">
+                <div
+                  class="contact-icon me-3 d-flex align-items-center justify-content-center"
+                  style="
+                    background-color: #4285f4;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                  "
+                >
+                  <i class="fas fa-map-marker-alt text-white"></i>
+                </div>
+                <div>
+                  <span class="text-white" data-i18n="footer.contacto.direccion"
+                    >Calle Atardeceres de Jaibaná, Vereda Cerritos, 660007
+                    Pereira</span
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Enlaces rápidos -->
+          <div class="col-md-12 col-lg-4 mt-4 mt-lg-0">
+            <div class="footer-title">
+              <h5
+                class="text-uppercase mb-0"
+                style="
+                  color: #6ac82a;
+                  font-family: 'Montserrat', sans-serif;
+                  font-weight: 600;
+                "
+                data-i18n="footer.enlaces.titulo"
+              >
+                Enlaces Rápidos
+              </h5>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <a
+                      href="nosotros.html"
+                      class="text-white text-decoration-none hover-green d-flex align-items-center"
+                      ><i
+                        class="fas fa-chevron-right me-2"
+                        style="color: #6ac82a; font-size: 0.8rem"
+                      ></i>
+                      <span data-i18n="footer.enlaces.item1">Nosotros</span></a
+                    >
+                  </li>
+                  <li class="mb-2">
+                    <a
+                      href="productos.html"
+                      class="text-white text-decoration-none hover-green d-flex align-items-center"
+                      ><i
+                        class="fas fa-chevron-right me-2"
+                        style="color: #6ac82a; font-size: 0.8rem"
+                      ></i>
+                      <span data-i18n="footer.enlaces.item2">Productos</span></a
+                    >
+                  </li>
+                  <li class="mb-2">
+                    <a
+                      href="ficha.html"
+                      class="text-white text-decoration-none hover-green d-flex align-items-center"
+                      ><i
+                        class="fas fa-chevron-right me-2"
+                        style="color: #6ac82a; font-size: 0.8rem"
+                      ></i>
+                      <span data-i18n="footer.enlaces.item3"
+                        >Precio Semanal</span
+                      ></a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <a
+                      href="procesos.html"
+                      class="text-white text-decoration-none hover-green d-flex align-items-center"
+                      ><i
+                        class="fas fa-chevron-right me-2"
+                        style="color: #6ac82a; font-size: 0.8rem"
+                      ></i>
+                      <span data-i18n="footer.enlaces.item4">Procesos</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="contacto.html"
+                      class="text-white text-decoration-none hover-green d-flex align-items-center"
+                      ><i
+                        class="fas fa-chevron-right me-2"
+                        style="color: #6ac82a; font-size: 0.8rem"
+                      ></i>
+                      <span data-i18n="footer.enlaces.item5">Contacto</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4" style="border-color: rgba(255, 255, 255, 0.1)" />
+
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <p class="small text-muted mb-0" data-i18n="footer.copyright">
+              &copy; 2023 Expofruto. Todos los derechos reservados.
+            </p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <ul class="list-inline small mb-0">
+              <li class="list-inline-item">
+                <a href="avisoLegal.html" class="text-decoration-none text-white hover-green" data-i18n="footer.avisoLegal">Aviso Legal</a>
+              </li>
+              <li class="list-inline-item mx-2 text-white">•</li>
+              <li class="list-inline-item">
+                <a href="politica.html" class="text-decoration-none text-white hover-green" data-i18n="footer.politica">Política de Privacidad</a>
+              </li>
+              <li class="list-inline-item mx-2 text-white">•</li>
+              <li class="list-inline-item">
+                <a href="politicaCookies.html" class="text-decoration-none text-white hover-green" data-i18n="footer.cookies">Política de Cookies</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="footer-deco position-absolute bottom-0 start-0 w-100"
+        style="
+          height: 4px;
+          background: linear-gradient(90deg, #6ac82a 0%, #1c1c1c 100%);
+        "
+      ></div>
+    </footer>
+    <script>
+// Resaltar el enlace activo en la navbar
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute('href');
+        if (currentPage === linkPage) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+});
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/script.js"></script>
+    <script src="js/producIdioma.js" defer></script>
+</body>
+</html>
